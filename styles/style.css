@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Russo One", sans-serif;
+  background-color: #f3f6fd;
+  font-weight: 400;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.button {
+  background: #edecfe;
+  border-radius: 9px;
+  border: none;
+  font-size: 13px;
+  line-height: 14px;
+  color: #5051f9;
+  padding: 14px 30px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #b3adff;
+}
+
+.app {
+  display: flex;
+}
+
+.logo {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 50px;
+  background: #222291;
+  padding: 10px;
+  border-radius: 14px;
+}
+.logo img {
+  filter: brightness(0) invert(1);
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.panel {
+  background: white;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+.menu__item {
+  background: #fff;
+  box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+  border-radius: 14px;
+  border: none;
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+}
+
+.menu__item:hover {
+  background: #6a6afb;
+}
+
+.menu__item:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.menu__item_active {
+  background: #5051f9;
+}
+.menu__item_active img {
+  filter: brightness(0) invert(1);
+}
+.menu img {
+  width: 35px;
+  height: 35px;
+}
+
+.menu__add {
+  background: none;
+  border: 1px solid #cad5ff;
+  box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+  border-radius: 14px;
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+}
+.menu__add img {
+  height: 25px;
+  width: 25px;
+}
+
+.menu__add:hover {
+  background: #adadff;
+}
+.content {
+  min-width: 900px;
+  padding: 45px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 33px;
+  color: black;
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 235px;
+}
+
+.progress__text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress__name {
+  font-size: 14px;
+  line-height: 16px;
+  color: #222291;
+}
+
+.progress__percent {
+  font-size: 12px;
+  line-height: 13px;
+  color: #7f7f85;
+}
+
+.progress__bar {
+  width: 100%;
+  background: #aaaaaa;
+  border-radius: 4px;
+  height: 5px;
+  position: relative;
+}
+
+.progress__cover-bar {
+  position: absolute;
+  width: 50%;
+  width: 50%;
+  background: #5051f9;
+  border-radius: 4px;
+  height: 5px;
+}
+
+main {
+  margin-top: 30px;
+}
+
+.habbit {
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.habbit__day {
+  background: #fbfaff;
+  border-radius: 10px 0 0 10px;
+  border-right: 1px solid #adadad;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 20px 40px;
+  min-width: 150px;
+}
+.habbit__comment {
+  font-size: 16px;
+  line-height: 18px;
+  padding: 20px 25px;
+}
+.habbit__delete {
+  border: none;
+  border-radius: 14px;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: 10px;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.habbit__delete img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 25px;
+  height: 25px;
+}
+
+.habbit__delete:hover {
+  background: red;
+}
+
+.habbit__delete:hover img {
+  filter: brightness(0) invert(1);
+}
+
+input {
+  background: #fff;
+  border: 1px solid #e7ebfb;
+  border-radius: 9px;
+  padding: 12px 20px;
+  font-family: "Russo One", sans-serif;
+  flex: 1;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+input::placeholder {
+  color: #8899a8;
+}
+
+.habbit__form {
+  display: flex;
+  gap: 14px;
+  width: 100%;
+  padding: 0px 10px 0 25px;
+  position: relative;
+}
+.input_icon {
+  padding-left: 45px;
+}
+
+.input__icon {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  top: 8px;
+  left: 45px;
+}

@@ -1,12 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>FitDo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/style.css " />
   </head>
-  <script src="app.js"></script>
   <body>
-    <h1>AAA</h1>
+    <div class="app">
+      <div class="panel">
+        <div class="logo">
+          <img src="./images/icons/sport-centre-svgrepo-com.svg" alt="FitDo" />
+        </div>
+        <nav class="menu">
+          <div class="menu__list">
+            <button class="menu__item menu__item_active">
+              <img src="./images/icons/dumbbell-alt.svg" alt="dumbbell" />
+            </button>
+            <button class="menu__item">
+              <img src="./images/icons/water-bottle.svg" alt="water" />
+            </button>
+            <button class="menu__item">
+              <img src="./images/icons/soup.svg" alt="soup" />
+            </button>
+          </div>
+          <button class="menu__add">
+            <img src="./images/icons/add.svg" alt="add" />
+          </button>
+        </nav>
+      </div>
+      <div class="content">
+        <header>
+          <h1>Progress</h1>
+          <div class="progress">
+            <div class="progress__text">
+              <div class="progress__name">Прогресс</div>
+              <div class="progress__percent">80%</div>
+            </div>
+            <div class="progress__bar">
+              <div class="progress__cover-bar"></div>
+            </div>
+          </div>
+        </header>
+        <main>
+          <div>
+            <div class="habbit">
+              <div class="habbit__day">day 1</div>
+              <div class="habbit__comment">comment</div>
+              <button class="habbit__delete">
+                <img src="./images/icons/trash.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="habbit">
+            <div class="habbit__day">День 2</div>
+            <form action="#" class="habbit__form">
+              <input class="input_icon" type="text" placeholder="Комментарий" />
+              <img
+                class="input__icon"
+                src="./images/icons/comment.svg"
+                alt="comment"
+              />
+              <button class="button">Готово</button>
+            </form>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="/scripts/app.js"></script>
   </body>
 </html>
