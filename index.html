@@ -49,8 +49,13 @@
           </div>
           <div class="habbit">
             <div class="habbit__day">День 2</div>
-            <form action="#" class="habbit__form">
-              <input class="input_icon" type="text" placeholder="Комментарий" />
+            <form action="#" class="habbit__form" onsubmit="addHabbit(event)">
+              <input
+                class="input_icon"
+                type="text"
+                placeholder="Комментарий"
+                name="comment"
+              />
               <img
                 class="input__icon"
                 src="./images/icons/comment.svg"

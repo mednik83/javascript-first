@@ -13,6 +13,7 @@ const page = {
     progressCoverBar: document.querySelector(".progress__cover-bar"),
   },
   habbits: document.querySelector(".habbits"),
+  form: document.querySelector(".habbit__form"),
 };
 
 /* utils */
@@ -89,7 +90,9 @@ function rerenderMain(activeHabbit) {
     element.innerHTML = `
       <div class="habbit__day">День ${index + 1}</div>
       <div class="habbit__comment">${habbit.comment}</div>
-      <button class="habbit__delete">
+      <button class="habbit__delete" onclick="deleteHabbit(${index}, ${
+      activeHabbit.id - 1
+    })">
         <img src="./images/icons/trash.svg" alt="" />
       </button>
       `;
@@ -101,9 +104,44 @@ function rerenderMain(activeHabbit) {
   allHabbits[allHabbits.length - 1].querySelector(
     ".habbit__day"
   ).innerText = `День ${allHabbits.length}`;
+
+  page.form.setAttribute("data-habbit-id", `${activeHabbit.id}`);
+}
+
+function deleteHabbit(habbitId, activeHabbit) {
+  habbits[activeHabbit].days = habbits[activeHabbit].days.filter(
+    (_, id) => id !== habbitId
+  );
+
+  saveData();
+  rerender(habbits[activeHabbit].id);
+}
+
+function addHabbit(event) {
+  event.preventDefault();
+
+  const input = page.form.querySelector(".input_icon");
+  const comment = input.value.trim();
+
+  const habbitId = parseInt(page.form.dataset.habbitId, 10);
+  console.log(habbitId);
+
+  if (comment === "") {
+    alert("Комментарий не может быть пустым");
+    return;
+  }
+
+  habbits[habbitId - 1].days.push({ comment });
+
+  saveData();
+  rerender(habbitId);
+
+  input.value = "";
 }
 
 function rerender(activeHabbitId) {
+  console.log(activeHabbitId);
+
   const activeHabbit = habbits.find((habbit) => habbit.id === activeHabbitId);
   rerenderMenu(activeHabbit);
   rerenderHead(activeHabbit);
