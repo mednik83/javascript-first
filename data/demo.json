@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "icon": "dumbbell-alt",
+    "name": "Отжимания",
+    "target": 10,
+    "days": [
+      { "comment": "Первый подход - тяжело" },
+      { "comment": "Второй день уже проще" }
+    ]
+  },
+  {
+    "id": 2,
+    "icon": "soup",
+    "name": "Правильное питание",
+    "target": 10,
+    "days": [{ "comment": "Ништяк!" }]
+  },
+  {
+    "id": 3,
+    "icon": "water-bottle",
+    "name": "Вода",
+    "target": 10,
+    "days": [{ "comment": "Водица!!" }]
+  }
+]
