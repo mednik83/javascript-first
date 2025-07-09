@@ -14,13 +14,13 @@
     "icon": "soup",
     "name": "Правильное питание",
     "target": 10,
-    "days": [{ "comment": "Ништяк!" }]
+    "days": [{ "comment": "Еда!" }]
   },
   {
     "id": 3,
     "icon": "water-bottle",
     "name": "Вода",
     "target": 10,
-    "days": [{ "comment": "Водица!!" }]
+    "days": [{ "comment": "Водица!" }]
   }
 ]

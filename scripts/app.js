@@ -23,6 +23,34 @@ const page = {
 function loadData() {
   const habbitsString = localStorage.getItem(HABBIT_KEY);
   const habbitArray = JSON.parse(habbitsString);
+  if (!habbitArray) {
+    habbits = [
+      {
+        id: 1,
+        icon: "dumbbell-alt",
+        name: "Отжимания",
+        target: 10,
+        days: [
+          { comment: "Первый подход - тяжело" },
+          { comment: "Второй день уже проще" },
+        ],
+      },
+      {
+        id: 2,
+        icon: "soup",
+        name: "Правильное питание",
+        target: 10,
+        days: [],
+      },
+      {
+        id: 3,
+        icon: "water-bottle",
+        name: "Вода",
+        target: 10,
+        days: [],
+      },
+    ];
+  }
   if (Array.isArray(habbitArray)) {
     habbits = habbitArray;
   }
