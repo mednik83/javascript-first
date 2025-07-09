@@ -49,7 +49,7 @@
           </div>
           <div class="habbit">
             <div class="habbit__day">День 2</div>
-            <form action="#" class="habbit__form" onsubmit="addHabbit(event)">
+            <form action="#" class="habbit__form" onsubmit="addDays(event)">
               <input
                 class="input_icon"
                 type="text"
@@ -61,10 +61,38 @@
                 src="./images/icons/comment.svg"
                 alt="comment"
               />
-              <button class="button">Готово</button>
+              <button class="button" type="submit">Готово</button>
             </form>
           </div>
         </main>
+      </div>
+      <div class="cover cover_hidden">
+        <div class="popup">
+          <h2>Новая привычка</h2>
+          <div class="icon-label">
+            <div class="icon-select">
+              <button
+                class="icon icon_active"
+                onclick="setIcon('dumbbell-alt', event)"
+              >
+                <img src="./images/icons/dumbbell-alt.svg" alt="" />
+              </button>
+              <button class="icon" onclick="setIcon('water-bottle', event)">
+                <img src="./images/icons/water-bottle.svg" alt="" />
+              </button>
+              <button class="icon" onclick="setIcon('soup', event)">
+                <img src="./images/icons/soup.svg" alt="" />
+              </button>
+            </div>
+            <form class="popup__form" onsubmit="addHabbit(event)">
+              <input type="text" name="name" placeholder="Название" />
+              <input type="text" name="icon" value="dumbbell-alt" hidden />
+              <input type="number" name="target" placeholder="Цель" />
+              <button class="button" type="submit">Добавить</button>
+            </form>
+            <button class="popup__close">X</button>
+          </div>
+        </div>
       </div>
     </div>
 
